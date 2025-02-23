@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Devir Hesaplama</title>
+    <link rel="stylesheet" href="styles/vida.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vida Devir Hesaplama</h1>
+
+        <div class="form-group">
+            <label for="motorSpeed">Motor Devri (d/dk):</label>
+            <input type="number" id="motorSpeed" placeholder="Motor Devri Giriniz">
+        </div>
+
+        <div class="form-group">
+            <label for="motorPulleyDiameter">Motor Kasnak Çapı (mm):</label>
+            <input type="number" id="motorPulleyDiameter" placeholder="Motor Kasnak Çapı Giriniz">
+        </div>
+
+        <div class="form-group">
+            <label for="screwPulleyDiameter">Vida Kasnak Çapı (mm):</label>
+            <input type="number" id="screwPulleyDiameter" placeholder="Vida Kasnak Çapı Giriniz">
+        </div>
+
+        <button id="calculateButton">Hesapla</button>
+
+        <div class="result">
+            <h2>Vida Devri:</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+
+    <script src="scripts/vida.js"></script>
+</body>
+</html>
