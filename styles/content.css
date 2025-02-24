@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #981B15, #591305);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo-container {
+    display: flex; /* Logoları yan yana hizala */
+    justify-content: center; /* Logoları ortala */
+    align-items: center; /* Logoları dikeyde ortala */
+    gap: 20px; /* Logolar arasına boşluk ekle */
+    margin-bottom: 20px; /* Başlık ile arasına boşluk ekle */
+}
+
+.logo {
+    width: 100px; /* Logo genişliği */
+    height: auto; /* Yüksekliği otomatik ayarla */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Butonların satırlara bölünmesini sağlar */
+    gap: 10px; /* Butonlar arası boşluk */
+}
+
+.button {
+    width: calc(40% - 20px); /* İki buton yan yana sığacak şekilde genişlik ayarla */
+    padding: 15px 20px; /* Padding değerleri sabitlendi */
+    background-color: #981B15;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 0;
+    text-align: center; /* Metni ortala */
+}
+
+.button:hover {
+    background-color: #591305;
+}
