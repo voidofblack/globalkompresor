@@ -44,10 +44,12 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 0 10px; /* Konteynırın içine padding ekle */
+    box-sizing: border-box; /* Padding'i genişliğe dahil et */
 }
 
 .button {
-    width: calc(50% - 20px);
+    width: calc(50% - 20px); /* Butonların genişliği */
     padding: 15px 20px;
     background-color: #981B15;
     color: white;
@@ -60,6 +62,7 @@ h1 {
     display: inline-block;
     margin: 8px 0;
     text-align: center;
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
 }
 
 .button:hover {
@@ -69,10 +72,12 @@ h1 {
 /* Mobil cihazlar için stil */
 @media (max-width: 768px) {
     .button {
-        width: 100%;
+        width: 100%; /* Butonların genişliğini %100 yap */
+        margin: 8px 0; /* Butonlar arası boşluk */
     }
 
     .button-container {
-        flex-direction: column;
+        flex-direction: column; /* Butonları alt alta diz */
+        padding: 0; /* Mobilde padding'i sıfırla */
     }
 }
