@@ -9,28 +9,42 @@
 <body>
   <div class="container">
     <h1>İkinci El Makineler</h1>
-    <button id="addMachineButton">Makine Ekle</button>
-
-    <!-- Açıklama ve Fotoğraf Yükleme Formu (Başlangıçta Gizli) -->
-    <form id="uploadForm" class="hidden">
-      <label for="description">Açıklama:</label>
-      <textarea id="description" placeholder="Makine hakkında açıklama yazın..." required></textarea>
-
-      <label for="photoUpload">Fotoğraf Yükle (Birden Fazla Seçebilirsiniz):</label>
-      <input type="file" id="photoUpload" accept="image/*" multiple required>
-      <button type="button" id="uploadPhotosButton">Fotoğrafları Yükle</button>
-
-      <!-- Fotoğraf Önizleme Alanı -->
-      <div id="photoPreview">
-        <!-- Yüklenen fotoğraflar burada gösterilecek -->
-      </div>
-
-      <button type="submit" id="confirmButton">Onayla</button>
-    </form>
-
     <!-- Yüklenen Makineler -->
     <div id="uploadedItems">
-      <!-- Yüklenen fotoğraflar ve açıklamalar burada gösterilecek -->
+      <!-- Örnek Makine 1 -->
+      <div class="uploaded-item">
+        <p>Makine 1 Açıklaması</p>
+        <div class="photo-container">
+          <img src="images/makine1.jpg" alt="Makine 1 Fotoğrafı">
+          <img src="images/makine2.jpg" alt="Makine 1 Fotoğrafı">
+        </div>
+        <div class="whatsapp-icon">
+          <img src="images/WhatsApp.svg" alt="WhatsApp">
+        </div>
+      </div>
+
+      <!-- Örnek Makine 2 -->
+      <div class="uploaded-item">
+        <p>Makine 2 Açıklaması</p>
+        <div class="photo-container">
+          <img src="images/makine3.jpg" alt="Makine 2 Fotoğrafı">
+        </div>
+        <div class="whatsapp-icon">
+          <img src="images/WhatsApp.svg" alt="WhatsApp">
+        </div>
+      </div>
+
+      <!-- Örnek Makine 3 -->
+      <div class="uploaded-item">
+        <p>Makine 3 Açıklaması</p>
+        <div class="photo-container">
+          <img src="images/makine4.jpg" alt="Makine 3 Fotoğrafı">
+          <img src="images/makine5.jpg" alt="Makine 3 Fotoğrafı">
+        </div>
+        <div class="whatsapp-icon">
+          <img src="images/WhatsApp.svg" alt="WhatsApp">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -40,7 +54,8 @@
     <img id="modalImage" class="modal-content">
   </div>
 
-  <!-- Firebase ve Cloudinary Entegrasyonu -->
-  <script type="module" src="scripts/foto.js"></script>
+  <!-- JavaScript -->
+  <script src="scripts/foto.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </body>
 </html>

@@ -192,3 +192,53 @@ body {
   .close:hover {
     color: #ccc;
   }
+  /* WhatsApp İkonu Stili */
+.whatsapp-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #25d366;
+    color: white;
+    width: 30px; /* Genişlik küçültüldü */
+    height: 30px; /* Yükseklik küçültüldü */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+  
+  .whatsapp-icon:hover {
+    background-color: #128c7e;
+  }
+  
+  .whatsapp-icon img {
+    width: 16px; /* İkon boyutu küçültüldü */
+    height: 16px; /* İkon boyutu küçültüldü */
+  }
+  
+  /* uploaded-item container'ı için göreceli konumlandırma */
+  .uploaded-item {
+    position: relative; /* WhatsApp ikonunun bu container içinde konumlanması için */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .download-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+  }
