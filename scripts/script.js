@@ -1,23 +1,8 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Formun gönderilmesini engelle
-
-    // Kullanıcı adı ve şifre değerlerini al
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    // Doğru kullanıcı adı ve şifre (sizin belirlediğiniz)
-    const correctUsername = "admin";
-    const correctPassword = "12345";
-
-    // Kontrol et
-    if (username === correctUsername && password === correctPassword) {
-        // Giriş başarılıysa içerik sayfasına yönlendir
-        window.location.href = "content.html"; // İleride bu sayfayı oluşturacağız
-    } else {
-        // Hatalı giriş mesajını göster
-        document.getElementById("error-message").classList.remove("hidden");
-    }
+document.getElementById("loginButton").addEventListener("click", function() {
+    // Giriş butonuna tıklandığında içerik sayfasına yönlendir
+    window.location.href = "content.html"; // İleride bu sayfayı oluşturacağız
 });
+
 function showPage(pageId) {
     // Tüm sayfaları gizle
     const pages = document.querySelectorAll('.page');
@@ -33,4 +18,3 @@ function showPage(pageId) {
 window.onload = () => {
     showPage('button1Page');
 };
-

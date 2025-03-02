@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-    width: 100px; /* Logo genişliği */
+    width: 200px; /* Logo genişliği */
     height: auto; /* Yüksekliği otomatik ayarla */
 }
 
@@ -36,15 +36,6 @@ h2 {
     color: #333;
     margin-bottom: 20px;
     text-align: center;
-}
-
-input {
-    width: 98%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
 }
 
 button {
@@ -62,8 +53,4 @@ button {
 
 button:hover {
     background-color: #591305;
-}
-
-.hidden {
-    display: none;
 }
