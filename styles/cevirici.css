@@ -63,7 +63,7 @@ input {
 }
 
 /* Mobil cihazlar için stil */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .container {
         margin: 5px;
         padding: 10px;
