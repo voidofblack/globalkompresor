@@ -20,16 +20,16 @@ body {
 }
 
 .logo-container {
-    display: flex; /* Logoları yan yana hizala */
-    justify-content: center; /* Logoları ortala */
-    align-items: center; /* Logoları dikeyde ortala */
-    gap: 20px; /* Logolar arasına boşluk ekle */
-    margin-bottom: 20px; /* Başlık ile arasına boşluk ekle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .logo {
-    width: 200px; /* Logo genişliği */
-    height: auto; /* Yüksekliği otomatik ayarla */
+    width: 200px;
+    height: auto;
 }
 
 h2 {
@@ -39,8 +39,8 @@ h2 {
 }
 
 button {
-    width: 250px; /* Butonların genişliği sabitlendi */
-    padding: 15px 20px; /* Padding değerleri sabitlendi */
+    width: 250px;
+    padding: 15px 20px;
     background-color: #981B15;
     color: white;
     border: none;
@@ -53,4 +53,33 @@ button {
 
 button:hover {
     background-color: #591305;
+}
+
+/* Mobil cihazlar için stil */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Body padding'i azalt */
+    }
+
+    .login-container {
+        padding: 15px; /* Konteynır padding'i azalt */
+    }
+
+    .logo-container {
+        flex-direction: column; /* Logoları alt alta diz */
+        gap: 10px; /* Logolar arası boşluğu azalt */
+    }
+
+    .logo {
+        width: 150px; /* Logoların boyutunu küçült */
+    }
+
+    button {
+        width: 100%; /* Butonları tam genişlik yap */
+        margin: 8px 0; /* Butonlar arası boşluğu ayarla */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Başlık boyutunu küçült */
+    }
 }
