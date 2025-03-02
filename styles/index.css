@@ -66,12 +66,12 @@ button:hover {
     }
 
     .logo-container {
-        flex-direction: column; /* Logoları alt alta diz */
-        gap: 10px; /* Logolar arası boşluğu azalt */
+        flex-direction: row; /* Logoları alt alta diz */
+        gap: 5px; /* Logolar arası boşluğu azalt */
     }
 
     .logo {
-        width: 150px; /* Logoların boyutunu küçült */
+        width: 100px; /* Logoların boyutunu küçült */
     }
 
     button {
