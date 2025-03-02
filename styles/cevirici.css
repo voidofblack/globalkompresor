@@ -12,35 +12,36 @@ body {
 .container {
     max-width: 1200px; /* Genişliği artırdık */
     width: 100%;
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 18px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h1, h2 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
 }
 
 .wrapper {
     display: flex;
-    gap: 20px; /* İki bölüm arasındaki boşluk */
+    gap: 10px; /* İki bölüm arasındaki boşluk */
     justify-content: space-between;
 }
 
 .converter-section {
     flex: 1; /* İki bölüm eşit genişlikte olacak */
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 80px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 5px;
     text-align: left;
 }
 
@@ -53,10 +54,10 @@ label {
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 12px;
     box-sizing: border-box;
 }
 
