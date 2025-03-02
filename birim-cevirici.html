@@ -10,55 +10,58 @@
     <div class="container">
         <h1>Birim Çevirici</h1>
 
-        <!-- Debi Birim Çevirici -->
-        <h2>Debi Birim Çevirici</h2>
-        <div class="form-group">
-            <label for="m3PerMinute">m³/dakika:</label>
-            <input type="number" id="m3PerMinute" placeholder="m³/dakika">
-        </div>
-        <div class="form-group">
-            <label for="cfm">CFM:</label>
-            <input type="number" id="cfm" placeholder="CFM">
-        </div>
-        <div class="form-group">
-            <label for="ltPerMinute">lt/dk:</label>
-            <input type="number" id="ltPerMinute" placeholder="lt/dk">
-        </div>
-        <div class="form-group">
-            <label for="m3PerHour">m³/saat:</label>
-            <input type="number" id="m3PerHour" placeholder="m³/saat">
-        </div>
-        <div class="form-group">
-            <label for="m3PerSecond">m³/saniye:</label>
-            <input type="number" id="m3PerSecond" placeholder="m³/saniye">
-        </div>
-        <button id="calculateFlowRate">Hesapla</button>
-        <button id="clearFlowRate">Temizle</button>
+        <!-- İki bölümü yan yana yerleştirmek için wrapper -->
+        <div class="wrapper">
+            <!-- Debi Birim Çevirici -->
+            <div class="converter-section">
+                <h2>Debi Birim Çevirici</h2>
+                <div class="form-group">
+                    <label for="m3PerMinute">m³/dakika:</label>
+                    <input type="number" id="m3PerMinute" placeholder="m³/dakika">
+                </div>
+                <div class="form-group">
+                    <label for="cfm">CFM:</label>
+                    <input type="number" id="cfm" placeholder="CFM">
+                </div>
+                <div class="form-group">
+                    <label for="ltPerMinute">lt/dk:</label>
+                    <input type="number" id="ltPerMinute" placeholder="lt/dk">
+                </div>
+                <div class="form-group">
+                    <label for="m3PerHour">m³/saat:</label>
+                    <input type="number" id="m3PerHour" placeholder="m³/saat">
+                </div>
+                <div class="form-group">
+                    <label for="m3PerSecond">m³/saniye:</label>
+                    <input type="number" id="m3PerSecond" placeholder="m³/saniye">
+                </div>
+            </div>
 
-        <!-- Basınç Birim Çevirici -->
-        <h2>Basınç Birim Çevirici</h2>
-        <div class="form-group">
-            <label for="bar">Bar:</label>
-            <input type="number" id="bar" placeholder="Bar">
+            <!-- Basınç Birim Çevirici -->
+            <div class="converter-section">
+                <h2>Basınç Birim Çevirici</h2>
+                <div class="form-group">
+                    <label for="bar">Bar:</label>
+                    <input type="number" id="bar" placeholder="Bar">
+                </div>
+                <div class="form-group">
+                    <label for="psi">PSI:</label>
+                    <input type="number" id="psi" placeholder="PSI">
+                </div>
+                <div class="form-group">
+                    <label for="atm">Atm:</label>
+                    <input type="number" id="atm" placeholder="Atm">
+                </div>
+                <div class="form-group">
+                    <label for="kgCm2">kg/cm²:</label>
+                    <input type="number" id="kgCm2" placeholder="kg/cm²">
+                </div>
+                <div class="form-group">
+                    <label for="mpa">MPa:</label>
+                    <input type="number" id="mpa" placeholder="MPa">
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="psi">PSI:</label>
-            <input type="number" id="psi" placeholder="PSI">
-        </div>
-        <div class="form-group">
-            <label for="atm">Atm:</label>
-            <input type="number" id="atm" placeholder="Atm">
-        </div>
-        <div class="form-group">
-            <label for="kgCm2">kg/cm²:</label>
-            <input type="number" id="kgCm2" placeholder="kg/cm²">
-        </div>
-        <div class="form-group">
-            <label for="mpa">MPa:</label>
-            <input type="number" id="mpa" placeholder="MPa">
-        </div>
-        <button id="calculatePressure">Hesapla</button>
-        <button id="clearPressure">Temizle</button>
     </div>
 
     <script src="scripts/cevirici.js"></script>

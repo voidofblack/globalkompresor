@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const ltPerMinuteInput = document.getElementById('ltPerMinute');
     const m3PerHourInput = document.getElementById('m3PerHour');
     const m3PerSecondInput = document.getElementById('m3PerSecond');
-    const calculateFlowRateButton = document.getElementById('calculateFlowRate');
-    const clearFlowRateButton = document.getElementById('clearFlowRate');
 
     // Basınç Birim Çevirici Elementleri
     const barInput = document.getElementById('bar');
@@ -14,11 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const atmInput = document.getElementById('atm');
     const kgCm2Input = document.getElementById('kgCm2');
     const mpaInput = document.getElementById('mpa');
-    const calculatePressureButton = document.getElementById('calculatePressure');
-    const clearPressureButton = document.getElementById('clearPressure');
 
-    // Debi Hesapla Fonksiyonu
-    calculateFlowRateButton.addEventListener('click', function () {
+    // Debi Hesaplama Fonksiyonu
+    function calculateFlowRate() {
         const m3PerMinute = parseFloat(m3PerMinuteInput.value);
         const cfm = parseFloat(cfmInput.value);
         const ltPerMinute = parseFloat(ltPerMinuteInput.value);
@@ -50,20 +46,17 @@ document.addEventListener('DOMContentLoaded', function () {
             cfmInput.value = (m3PerSecond * 2118.87997).toFixed(6);
             ltPerMinuteInput.value = (m3PerSecond * 60000).toFixed(6);
             m3PerHourInput.value = (m3PerSecond * 3600).toFixed(6);
+        } else {
+            // Eğer tüm alanlar boşsa, diğer alanları temizle
+            cfmInput.value = '';
+            ltPerMinuteInput.value = '';
+            m3PerHourInput.value = '';
+            m3PerSecondInput.value = '';
         }
-    });
+    }
 
-    // Debi Temizle Fonksiyonu
-    clearFlowRateButton.addEventListener('click', function () {
-        m3PerMinuteInput.value = '';
-        cfmInput.value = '';
-        ltPerMinuteInput.value = '';
-        m3PerHourInput.value = '';
-        m3PerSecondInput.value = '';
-    });
-
-    // Basınç Hesapla Fonksiyonu
-    calculatePressureButton.addEventListener('click', function () {
+    // Basınç Hesaplama Fonksiyonu
+    function calculatePressure() {
         const bar = parseFloat(barInput.value);
         const psi = parseFloat(psiInput.value);
         const atm = parseFloat(atmInput.value);
@@ -95,15 +88,26 @@ document.addEventListener('DOMContentLoaded', function () {
             psiInput.value = (mpa * 145.037737797).toFixed(6);
             atmInput.value = (mpa * 9.869232667160128).toFixed(6);
             kgCm2Input.value = (mpa * 10.1972).toFixed(6);
+        } else {
+            // Eğer tüm alanlar boşsa, diğer alanları temizle
+            psiInput.value = '';
+            atmInput.value = '';
+            kgCm2Input.value = '';
+            mpaInput.value = '';
         }
-    });
+    }
 
-    // Basınç Temizle Fonksiyonu
-    clearPressureButton.addEventListener('click', function () {
-        barInput.value = '';
-        psiInput.value = '';
-        atmInput.value = '';
-        kgCm2Input.value = '';
-        mpaInput.value = '';
-    });
+    // Debi Birim Çevirici için Input Event'leri
+    m3PerMinuteInput.addEventListener('input', calculateFlowRate);
+    cfmInput.addEventListener('input', calculateFlowRate);
+    ltPerMinuteInput.addEventListener('input', calculateFlowRate);
+    m3PerHourInput.addEventListener('input', calculateFlowRate);
+    m3PerSecondInput.addEventListener('input', calculateFlowRate);
+
+    // Basınç Birim Çevirici için Input Event'leri
+    barInput.addEventListener('input', calculatePressure);
+    psiInput.addEventListener('input', calculatePressure);
+    atmInput.addEventListener('input', calculatePressure);
+    kgCm2Input.addEventListener('input', calculatePressure);
+    mpaInput.addEventListener('input', calculatePressure);
 });
