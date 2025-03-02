@@ -1,15 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #981B15, #591305);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  }
-  
-  .container {
+}
+
+.container {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -17,54 +17,54 @@ body {
     width: 100%;
     max-width: 600px;
     text-align: center;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  #uploadedItems {
+}
+
+#uploadedItems {
     margin-top: 30px;
-  }
-  
-  .uploaded-item {
+}
+
+.uploaded-item {
     position: relative;
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
-  }
-  
-  .uploaded-item p {
+}
+
+.uploaded-item p {
     margin: 0 0 10px 0;
     font-size: 16px;
     color: #333;
-  }
-  
-  .photo-container {
+}
+
+.photo-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  
-  .photo-container img {
+}
+
+.photo-container img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s;
-  }
-  
-  .photo-container img:hover {
+}
+
+.photo-container img:hover {
     transform: scale(1.1);
-  }
-  
-  /* İndirme Butonu Stili */
-  .download-button {
-    background-color: #007bff;
+}
+
+/* İndirme Butonu Stili */
+.download-button {
+    background-color: #981B15;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -72,14 +72,15 @@ body {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-  }
-  
-  .download-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Modal Stilleri */
-  .modal {
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #591305;
+}
+
+/* Modal Stilleri */
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -89,17 +90,17 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     overflow: auto;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     display: block;
     margin: 10% auto;
     max-width: 80%;
     max-height: 80%;
     border-radius: 5px;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 20px;
     right: 35px;
@@ -107,8 +108,26 @@ body {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  .close:hover {
+}
+
+.close:hover {
     color: #ccc;
-  }
+}
+
+/* Mobil cihazlar için stil */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .photo-container img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
+}

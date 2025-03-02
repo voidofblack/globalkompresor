@@ -7,17 +7,92 @@ const closeModal = document.querySelector('.close');
 // Örnek Makine Verileri
 const makineler = [
   {
-    description: "Makine 1 Açıklaması",
-    photos: [ "images/trakyalogo.png"]
+    description: "Dalgakıran Inversys 90| 7,5 Bar| 90kW| Bakımları yapıldı, Ekran yenilendi. ",
+    photos: [ "images/inv90/makina (1).jpg", "images/inv90/makina (2).jpg",
+        "images/inv90/makina (3).jpg","images/inv90/makina (4).jpg",
+        "images/inv90/makina (5).jpg","images/inv90/makina (6).jpg",
+        "images/inv90/makina (7).jpg"]
   },
   {
-    description: "Makine 2 Açıklaması",
-    photos: ["images/makine3.jpg"]
+    description: "Dalgakıran Inversys 60| 7,5 Bar| 60kW| Revizyonu ve Bakımları yapıldı, Ekran yenilendi.",
+    photos: [ "images/inv60/makine (1).jpg","images/inv60/makine (2).jpg",
+        "images/inv60/makine (3).jpg","images/inv60/makine (4).jpg",
+        "images/inv60/makine (5).jpg","images/inv60/makine (6).jpg",
+        "images/inv60/makine (7).jpg","images/inv60/makine (8).jpg"
+    ]
   },
   {
-    description: "Makine 3 Açıklaması",
-    photos: ["images/makine4.jpg", "images/makine5.jpg"]
-  }
+    description: "Inversys 160+ Plus| 7,5 Bar| 160kW| 40821 saatte| Bakımları yapıldı.",
+    photos: [ "images/inv160+/makine (1).jpg","images/inv160+/makine (2).jpg",
+        "images/inv160+/makine (3).jpg","images/inv160+/makine (4).jpg",
+        "images/inv160+/makine (5).jpg","images/inv160+/makine (6).jpg",
+        "images/inv160+/makine (7).jpg"]
+  },
+  {
+    description: "Ekomak Eko110 QDVST| 8 Bar| 110kW| 60000 saatte| Revizyonu ve Bakımları yapıldı.",
+    photos: [ "images/110qdvst/makine (1).jpg","images/110qdvst/makine (2).jpg",
+        "images/110qdvst/makine (3).jpg","images/110qdvst/makine (4).jpg",
+        "images/110qdvst/makine (5).jpg","images/110qdvst/makine (6).jpg",
+    "images/110qdvst/makine (7).jpg"
+    ]
+  },
+  {
+    description: "Dvk 100| 7,5 Bar| 75kW| Revizyonu ve Bakımları yapıldı. Pano Revizyonu yapıldı ekran yenilendi",
+    photos: [ "images/dvk100kırmızı/makine (1).jpg","images/dvk100kırmızı/makine (2).jpg",
+        "images/dvk100kırmızı/makine (3).jpg","images/dvk100kırmızı/makine (4).jpg",
+        "images/dvk100kırmızı/makine (5).jpg","images/dvk100kırmızı/makine (6).jpg",
+        "images/dvk100kırmızı/makine (7).jpg"]
+  },
+  {
+    description: "Dvk 75| 7,5 Bar| 55kW| Revizyonu ve Bakımları yapıldı. Ekran yenilendi, Kasa boyandı ",
+    photos: [ "images/dvk75gri/makine (1).jpg","images/dvk75gri/makine (2).jpg",
+        "images/dvk75gri/makine (3).jpg","images/dvk75gri/makine (4).jpg",
+        "images/dvk75gri/makine (5).jpg","images/dvk75gri/makine (6).jpg",
+        ]
+  },
+  {
+    description: "Dvk 75| 7,5 Bar| 55kW| 44000 saatte| Revizyonu ve Bakımları yapıldı.",
+    photos: [ "images/dvk75beyaz/makine (1).jpg","images/dvk75beyaz/makine (2).jpg",
+        "images/dvk75beyaz/makine (3).jpg","images/dvk75beyaz/makine (4).jpg",
+        "images/dvk75beyaz/makine (5).jpg","images/dvk75beyaz/makine (6).jpg",
+    "images/dvk75beyaz/makine (7).jpg"
+    ]
+  },
+  {
+    description: "Dvk 60| 10 Bar| 45kW| Revizyonu ve Bakımları yapıldı, Ekran yenilendi.",
+    photos: [ "images/dvk60/makine (1).jpg","images/dvk60/makine (2).jpg",
+        "images/dvk60/makine (3).jpg","images/dvk60/makine (4).jpg",
+        "images/dvk60/makine (5).jpg","images/dvk60/makine (6).jpg",
+    "images/dvk60/makine (7).jpg","images/dvk60/makine (8).jpg"
+    ]
+  },
+  {
+    description: "Dvk 50| 8 Bar| 37kW| Revizyonu ve Bakımları yapıldı",
+    photos: [ "images/dvk50gri/makine (1).jpg","images/dvk50gri/makine (2).jpg",
+        "images/dvk50gri/makine (3).jpg","images/dvk50gri/makine (4).jpg",
+        "images/dvk50gri/makine (5).jpg"
+    ]
+  },
+  {
+    description: "Tahaş RSN125E| 8 Bar| 90kW| Revizyonu ve Bakımları yapıldı.",
+    photos: [ "images/tahas90/makine (1).jpg","images/tahas90/makine (2).jpg",
+        "images/tahas90/makine (3).jpg","images/tahas90/makine (4).jpg",
+        "images/tahas90/makine (5).jpg","images/tahas90/makine (6).jpg",
+    "images/tahas90/makine (7).jpg"
+    ]
+  },
+  {
+    description: "Vidkom 11| 8 Bar| 11kW| 42000 saatte| Bakımları yapıldı.",
+    photos: [ "images/vidkom/makine (1).jpg","images/vidkom/makine (2).jpg",
+        "images/vidkom/makine (3).jpg","images/vidkom/makine (4).jpg",
+    ]
+  },
+  {
+    description: "Dalgakıran Tidy 10| 9 Bar| 7,5kW| Bakımları yapıldı.",
+    photos: [ "images/tidy10/makine (1).jpg","images/tidy10/makine (2).jpg",
+        "images/tidy10/makine (3).jpg","images/tidy10/makine (4).jpg",
+    ]
+  },
 ];
 
 // Yüklenen Makineleri Ekrana Render Etme
