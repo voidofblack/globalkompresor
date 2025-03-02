@@ -111,11 +111,16 @@ button:hover {
   }
 
   .buttons {
-      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap; /* Butonların satırda sığmazsa alt satıra geçmesini sağlar */
+      gap: 8px; /* Butonlar arası boşluk */
   }
 
   .buttons button {
-      width: 100%;
-      margin-bottom: 8px;
+      flex: 1; /* Butonların eşit genişlikte olmasını sağlar */
+      min-width: 100px; /* Butonların minimum genişliği */
+      padding: 8px; /* Buton içi boşluk */
+      font-size: 12px; /* Yazı boyutunu küçült */
+      margin-bottom: 0; /* Alt boşluğu kaldır */
   }
 }
