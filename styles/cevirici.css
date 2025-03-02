@@ -10,10 +10,10 @@ body {
 }
 
 .container {
-    max-width: 1200px; /* Genişliği artırdık */
+    max-width: 1200px; /* Genişlik sabit */
     width: 100%;
     margin: 5px;
-    padding: 5px;
+    padding: 10px; /* Padding'i biraz artırdık */
     background-color: #fff;
     border-radius: 18px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,7 +23,7 @@ body {
 h1, h2 {
     color: #333;
     margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 25px; /* Başlık boyutu sabit */
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ h1, h2 {
 .converter-section {
     flex: 1; /* İki bölüm eşit genişlikte olacak */
     background-color: #f9f9f9;
-    padding: 80px;
+    padding: 20px; /* Padding'i küçülttük */
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -50,6 +50,7 @@ label {
     margin-bottom: 8px;
     font-weight: bold;
     color: #333;
+    font-size: 14px; /* Etiket boyutunu küçülttük */
 }
 
 input {
@@ -57,18 +58,35 @@ input {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 12px; /* Input boyutunu küçülttük */
     box-sizing: border-box;
 }
 
 /* Mobil cihazlar için stil */
 @media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column; /* Mobilde tek sütun halinde göster */
+    .container {
+        margin: 5px;
+        padding: 10px;
     }
 
-    .container {
-        margin: 10px;
-        padding: 15px;
+    .wrapper {
+        flex-direction: column; /* Mobilde tek sütun halinde göster */
+        gap: 5px; /* Mobilde bölümler arası boşluğu azalt */
+    }
+
+    .converter-section {
+        padding: 15px; /* Mobilde padding'i daha da küçült */
+    }
+
+    h1, h2 {
+        font-size: 20px; /* Mobilde başlık boyutunu küçült */
+    }
+
+    label {
+        font-size: 12px; /* Mobilde etiket boyutunu küçült */
+    }
+
+    input {
+        font-size: 10px; /* Mobilde input boyutunu küçült */
     }
 }
